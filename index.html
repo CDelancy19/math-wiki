@@ -8,7 +8,9 @@
 body {
   background-color: pink;
   border: 3px solid white;
+  font-family: serif;
 }
+
 h1 {
   color: Gray;
 }
@@ -16,6 +18,11 @@ h1 {
 .hidden {
   display: none;
 }
+
+p {
+  text-indent: 30px;
+}
+
 </style>
 </head>
 <body>
@@ -33,41 +40,43 @@ h1 {
     </ul>
     <p>Mathematics is useful for solving problems that occur in the real world, so many people besides mathematicians study and use mathematics. Today, some mathematics is needed in many jobs. People working in business, science, engineering, and construction need some knowledge of mathematics.</p>
   </div>
-  <div class="contents">
     <aside>
-      <h4>Contents</h4>
-      <ol>
-        <li>Problem-solving in mathematics
-</li>
-        <li>Areas of study in mathematics
-          <ol>
-            <li value="2.1">Number</li>
+      <div>
+      <h4 id="toggle">> Contents</h4>
+      
+      <ol id="context" start=1>
+        
+        <li>Problem-solving in mathematics</li>
+        <li>Areas of study in mathematics</li>
+        
+          <ol type=a>
+            <li>Number</li>
             <li>Structure</li>
             <li>Shape</li>
             <li>Change</li>
             <li>Applied Mathematics</li>
           </ol>
-        </li>
+        
         <li>Famous theorems</li>
         <li>Foundations and methods
-          <ol>
+          
+          <ol type=a>
             <li>History and the world of mahematicians</li>
           </ol>
-        </li>
+          
         <li>Awards in mathematics</li>
         <li>Mathematical tools</li>
         <li>References</li>
         <li>Related Pages</li>
         <li>Other Websites</li>
       </ol>
+        
+      </div>
     </aside>
-  </div>
 <script id="jsbin-javascript">
 console.clear()
-const header1 = document.getElementById("heading")
-const table = document.getElementById("list")
-//console.log(header1.innerText)
-//console.log(table.innerText)
+const header1 = document.getElementById("toggle")
+const table = document.getElementById("context")
 
 header1.addEventListener('click', function(){
                          table.classList.toggle('hidden');
@@ -78,20 +87,25 @@ header1.addEventListener('click', function(){
 <script id="jsbin-source-css" type="text/css">body {
   background-color: pink;
   border: 3px solid white;
+  font-family: serif;
 }
+
 h1 {
   color: Gray;
 }
 
 .hidden {
   display: none;
-}</script>
+}
+
+p {
+  text-indent: 30px;
+}
+</script>
 
 <script id="jsbin-source-javascript" type="text/javascript">console.clear()
-const header1 = document.getElementById("heading")
-const table = document.getElementById("list")
-//console.log(header1.innerText)
-//console.log(table.innerText)
+const header1 = document.getElementById("toggle")
+const table = document.getElementById("context")
 
 header1.addEventListener('click', function(){
                          table.classList.toggle('hidden');
